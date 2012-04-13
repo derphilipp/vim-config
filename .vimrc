@@ -58,11 +58,10 @@ set timeoutlen=250  " Time to wait after ESC (default causes an annoying delay)
 set pastetoggle=<F10> "  toggle between paste and normal: for 'safer' pasting from keyboard
 set tags=./tags;$HOME " walk directory tree upto $HOME looking for tags
 
+set number
+
 let g:syntastic_auto_loc_list=1
 let g:syntastic_disabled_filetypes=['html']
 let g:syntastic_enable_signs=1
-
-
-
 let g:syntastic_python_checker = 'flake8'
 
