@@ -60,8 +60,13 @@ set tags=./tags;$HOME " walk directory tree upto $HOME looking for tags
 
 set number
 
-let g:syntastic_auto_loc_list=1
-let g:syntastic_disabled_filetypes=['html']
-let g:syntastic_enable_signs=1
-let g:syntastic_python_checker = 'flake8'
+"let g:syntastic_auto_loc_list=1
+"let g:syntastic_disabled_filetypes=['html']
+"let g:syntastic_enable_signs=1
+"let g:syntastic_python_checker = 'flake8'
 
+
+set clipboard=unnamed
+
+":#set mouse=nicr
+set mouse=a
