@@ -1,6 +1,8 @@
 set nocompatible
 filetype off
 
+let Tlist_Ctags_Cmd='/opt/local/bin/ctags'
+
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
@@ -15,10 +17,13 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'tpope/vim-rails.git'
+Bundle 'vim-scripts/Lucius'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'Syntastic'
+Bundle 'taglist.vim'
+Bundle 'ctags.vim'
 " non github repos
 Bundle 'git://git.wincent.com/command-t.git'
 " Git Integration
@@ -70,3 +75,5 @@ set clipboard=unnamed
 
 ":#set mouse=nicr
 set mouse=a
+
+colorscheme lucius
