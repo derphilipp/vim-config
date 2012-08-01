@@ -24,6 +24,7 @@ Bundle 'FuzzyFinder'
 Bundle 'Syntastic'
 Bundle 'taglist.vim'
 Bundle 'ctags.vim'
+Bundle 'minibufexpl.vim'
 " non github repos
 Bundle 'git://git.wincent.com/command-t.git'
 " Git Integration
@@ -77,3 +78,11 @@ set clipboard=unnamed
 set mouse=a
 
 colorscheme lucius
+
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavArrows = 1
+let g:miniBufExplMapCTabSwitchBufs = 1
+let g:miniBufExplModSelTarget = 1
+map P :TlistToggle<CR>
+
+autocmd FileType python set omnifunc=pythoncomplete#Complete
