@@ -41,7 +41,7 @@ syntax on
 
 set showmatch  " Show matching brackets.
 set matchtime=5  " Bracket blinking.
-set tabstop=2    " Set the default tabstop
+set tabstop=4    " Set the default tabstop
 set softtabstop=4
 set shiftwidth=4 " Set the default shift width for indents
 set expandtab   " Make tabs into spaces (set by tabstop)
@@ -72,7 +72,6 @@ set number
 "let g:syntastic_python_checker = 'flake8'
 
 
-set clipboard=unnamed
 
 ":#set mouse=nicr
 set mouse=a
@@ -85,4 +84,30 @@ let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplModSelTarget = 1
 map P :TlistToggle<CR>
 
+" Einstellungen für C++ autocompletion
 autocmd FileType python set omnifunc=pythoncomplete#Complete
+
+" Einstellungen für C++ Checker
+let g:syntastic_cpp_compiler_options = ' -std=c++11 -D_GLIBCXX_USE_NANOSLEEP'
+
+"Einstellungen für C++ Autocompletion
+"
+let OmniCpp_NamespaceSearch = 1      
+let OmniCpp_GlobalScopeSearch = 1      
+let OmniCpp_ShowAccess = 1      
+let OmniCpp_MayCompleteDot = 1      
+let OmniCpp_MayCompleteArrow = 1      
+let OmniCpp_MayCompleteScope = 1      
+let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]  
+au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif      
+set completeopt=menuone,menu,longest,preview
+
+set tags+=~/.vim/tags/stl
+"set tags+=~/.vim/tags/gl
+"set tags+=~/.vim/tags/sdl
+set tags+=~/.vim/tags/qt4
+
+set list
+set list listchars=tab:▸\ ,trail:⋅,nbsp:⋅
+
+set clipboard=unnamed
